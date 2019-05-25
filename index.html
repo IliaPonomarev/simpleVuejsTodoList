@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="app">
+		<form class="form">
+			<input v-model="inputText" class="input" >
+			<button @click="addItem" type="button">Добавить</button>
+		</form>
+		<div class="result">
+			<div class="tasks" v-for="(item, index) in items">
+				<div class="tasks__text">
+					{{item.text}}
+					<button @click="deleteItem(index)" class="delete" type="button">X</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
